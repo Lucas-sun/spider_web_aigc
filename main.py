@@ -18,8 +18,6 @@ def crawl_aigc(args):
     AirSpider爬虫
     """
     if args == 1:
-        os.system("playwright install-deps")
-        os.system("playwright install chromium")
         tasks = [
             AigcJcrewSpider,
         ]
