@@ -1,3 +1,5 @@
+pwd
+
 source /home/mmt/anaconda3/etc/profile.d/conda.sh
 
 conda activate .venv_py311
