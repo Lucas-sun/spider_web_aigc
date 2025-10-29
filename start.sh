@@ -2,6 +2,8 @@ pip install uv
 
 uv sync -p 3.11
 
+uv pip install --upgrade greenlet
+
 uv pip install playwright==1.24.0
 
 uv run playwright install-deps
