@@ -1,4 +1,6 @@
-/home/mmt/anaconda3/bin/conda activate .venv_py311
+source /home/mmt/anaconda3/etc/profile.d/conda.sh
+
+conda activate .venv_py311
 
 pip install -r ./requirements.txt
 
