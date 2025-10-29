@@ -5,4 +5,5 @@ description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
     "feapder[all]>=1.9.2",
+    "playwright==1.24.0",
 ]
