@@ -4,10 +4,6 @@ uv sync -p 3.11
 
 uv pip install --upgrade greenlet
 
-uv pip install playwright==1.26.0
-
-uv run playwright install-deps
-
-uv run playwright install chromium
+uv run playwright install webkit
 
 uv run main.py --crawl_aigc 1
