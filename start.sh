@@ -1,5 +1,5 @@
-python -V
+pip install uv
 
-pip install -r ./requirements.txt
+uv sync -p 3.11
 
-python main.py --crawl_aigc 1
+uv run main.py --crawl_aigc 1
