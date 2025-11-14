@@ -20,9 +20,9 @@ MYSQL_USER_PASS = "gmRSLQ$F55wvkOT"
 #
 # # REDIS
 # # ip:port 多个可写为列表或者逗号隔开 如 ip1:port1,ip2:port2 或 ["ip1:port1", "ip2:port2"]
-# REDISDB_IP_PORTS = "localhost:6379"
-# REDISDB_USER_PASS = ""
-# REDISDB_DB = 0
+REDISDB_IP_PORTS = os.getenv("REDISDB_IP_PORTS", "java_redis_wan.pro.wangoon.cn:6379")
+REDISDB_USER_PASS = "c57K%48^4!@X1e87"
+REDISDB_DB = int(os.getenv("REDISDB_DB", 19))
 # # 连接redis时携带的其他参数，如ssl=True
 # REDISDB_KWARGS = dict()
 # # 适用于redis哨兵模式
@@ -42,7 +42,7 @@ MYSQL_USER_PASS = "gmRSLQ$F55wvkOT"
 # COLLECTOR_TASK_COUNT = 32  # 每次获取任务数量，追求速度推荐32
 #
 # # SPIDER
-SPIDER_THREAD_COUNT = 2  # 爬虫并发数，追求速度推荐32
+SPIDER_THREAD_COUNT = 1  # 爬虫并发数，追求速度推荐32
 # # 下载时间间隔 单位秒。 支持随机 如 SPIDER_SLEEP_TIME = [2, 5] 则间隔为 2~5秒之间的随机数，包含2和5
 SPIDER_SLEEP_TIME = [2, 5]
 # SPIDER_MAX_RETRY_TIMES = 10  # 每个请求最大重试次数
@@ -78,16 +78,16 @@ MAKE_ABSOLUTE_LINKS = True  # 自动转成绝对连接
 # )
 #
 PLAYWRIGHT = dict(
-    user_agent=None,  # 字符串 或 无参函数，返回值为user_agent
+    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",  # 字符串 或 无参函数，返回值为user_agent
     proxy=None,  # xxx.xxx.xxx.xxx:xxxx 或 无参函数，返回值为代理地址
     headless=True,  # 是否为无头浏览器
-    driver_type="webkit",  # chromium、firefox、webkit
+    driver_type="chromium",  # chromium、firefox、webkit
     timeout=60,  # 请求超时时间
     window_size=(1920, 1080),  # 窗口大小
     executable_path=None,  # 浏览器路径，默认为默认路径
     download_path=None,  # 下载文件的路径
     render_time=0,  # 渲染时长，即打开网页等待指定时间后再获取源码
-    wait_until="load",  # 等待页面加载完成的事件,可选值："commit", "domcontentloaded", "load", "networkidle"
+    wait_until="commit",  # 等待页面加载完成的事件,可选值："commit", "domcontentloaded", "load", "networkidle"
     use_stealth_js=False,  # 使用stealth.min.js隐藏浏览器特征
     page_on_event_callback=None,  # page.on() 事件的回调 如 page_on_event_callback={"dialog": lambda dialog: dialog.accept()}
     storage_state_path=None,  # 保存浏览器状态的路径

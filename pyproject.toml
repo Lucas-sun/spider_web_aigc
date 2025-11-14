@@ -5,4 +5,11 @@ description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
     "feapder[all]>=1.9.2",
+    "pandas>=2.3.3",
+    "pymysql>=1.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "httpx[http2]>=0.28.1",
 ]

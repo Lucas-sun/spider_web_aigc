@@ -11,6 +11,7 @@ import os
 from feapder import ArgumentParser
 
 from spiders.aigc_jcrew_spider import AigcJcrewSpider
+from spiders.aigc_wow_spider2 import AigcWowSpider
 
 
 def crawl_aigc(args):
@@ -28,6 +29,10 @@ def crawl_aigc(args):
         pass
 
 
+def crawl_wow(args):
+    AigcWowSpider(url_index=args).start()
+
+
 if __name__ == "__main__":
     parser = ArgumentParser(description="aigc爬虫")
 
@@ -38,6 +43,14 @@ if __name__ == "__main__":
         help="aigc爬虫",
         choices=[1, 2],
         function=crawl_aigc,
+    )
+    parser.add_argument(
+        "--crawl_wow",
+        type=int,
+        nargs=1,
+        help="aigc爬虫",
+        choices=[0, 1, 2, 3, 4, 5],
+        function=crawl_wow,
     )
 
     parser.start()
