@@ -12,6 +12,7 @@ from feapder import ArgumentParser
 
 from spiders.aigc_jcrew_spider import AigcJcrewSpider
 from spiders.aigc_wow_spider2 import AigcWowSpider
+from tools.download import Download
 
 
 def crawl_aigc(args):
@@ -32,6 +33,12 @@ def crawl_aigc(args):
 def crawl_wow(args):
     AigcWowSpider(url_index=args).start()
 
+def download_image(args):
+    if args == 1:
+        Download().start()
+    if args == 0:
+        print("测试消息")
+
 
 if __name__ == "__main__":
     parser = ArgumentParser(description="aigc爬虫")
@@ -51,6 +58,15 @@ if __name__ == "__main__":
         help="aigc爬虫",
         choices=[0, 1, 2, 3, 4, 5],
         function=crawl_wow,
+    )
+
+    parser.add_argument(
+        "--download_image",
+        type=int,
+        nargs=1,
+        help="下载图片",
+        choices=[0, 1],
+        function=download_image,
     )
 
     parser.start()

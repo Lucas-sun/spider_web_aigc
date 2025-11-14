@@ -2,13 +2,16 @@
 """爬虫配置文件"""
 import os
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # MYSQL
-MYSQL_IP = "172.20.200.74"
-MYSQL_PORT = 6033
+MYSQL_IP = os.getenv("MYSQL_IP", "dp_mysql_wan.pro.wangoon.cn")
+MYSQL_USER_NAME = os.getenv("MYSQL_USER_NAME", "dbuser_spider")
+MYSQL_USER_PASS = os.getenv("MYSQL_USER_PASS", "Gr9HQ7RAvQLa")
+MYSQL_PORT = int(os.getenv("MYSQL_PORT", 3306))
 MYSQL_DB = "spider"
-MYSQL_USER_NAME = "dbuser_dennisbrt"
-MYSQL_USER_PASS = "gmRSLQ$F55wvkOT"
 #
 # # MONGODB
 # MONGO_IP = "localhost"
@@ -42,17 +45,17 @@ REDISDB_DB = int(os.getenv("REDISDB_DB", 19))
 # COLLECTOR_TASK_COUNT = 32  # 每次获取任务数量，追求速度推荐32
 #
 # # SPIDER
-SPIDER_THREAD_COUNT = 1  # 爬虫并发数，追求速度推荐32
+SPIDER_THREAD_COUNT = int(os.getenv("SPIDER_THREAD_COUNT", 1))  # 爬虫并发数，追求速度推荐32
 # # 下载时间间隔 单位秒。 支持随机 如 SPIDER_SLEEP_TIME = [2, 5] 则间隔为 2~5秒之间的随机数，包含2和5
 SPIDER_SLEEP_TIME = [2, 5]
-# SPIDER_MAX_RETRY_TIMES = 10  # 每个请求最大重试次数
+SPIDER_MAX_RETRY_TIMES = int(os.getenv("SPIDER_MAX_RETRY_TIMES", 10))  # 每个请求最大重试次数
 # KEEP_ALIVE = False  # 爬虫是否常驻
 
 # 下载
 DOWNLOADER = "feapder.network.downloader.RequestsDownloader"  # 请求下载器
 SESSION_DOWNLOADER = "feapder.network.downloader.RequestsSessionDownloader"
 # RENDER_DOWNLOADER = "feapder.network.downloader.SeleniumDownloader"  # 渲染下载器
-RENDER_DOWNLOADER="feapder.network.downloader.PlaywrightDownloader"
+RENDER_DOWNLOADER = "feapder.network.downloader.PlaywrightDownloader"
 MAKE_ABSOLUTE_LINKS = True  # 自动转成绝对连接
 
 # # 浏览器渲染
@@ -78,7 +81,8 @@ MAKE_ABSOLUTE_LINKS = True  # 自动转成绝对连接
 # )
 #
 PLAYWRIGHT = dict(
-    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",  # 字符串 或 无参函数，返回值为user_agent
+    user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+    # 字符串 或 无参函数，返回值为user_agent
     proxy=None,  # xxx.xxx.xxx.xxx:xxxx 或 无参函数，返回值为代理地址
     headless=True,  # 是否为无头浏览器
     driver_type="chromium",  # chromium、firefox、webkit
@@ -188,3 +192,7 @@ LOG_IS_WRITE_TO_CONSOLE = True  # 是否打印到控制台
 # os.chdir(project_path)  # 切换工作路经
 # sys.path.insert(0, project_path)
 # print("当前工作路径为 " + os.getcwd())
+
+WEBSITE = os.getenv("WEBSITE", "wow")
+MACHINE_DOMAIN = os.getenv("MACHINE_DOMAIN")
+DOWNLOAD_PATH = os.getenv("DOWNLOAD_PATH")
