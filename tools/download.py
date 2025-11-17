@@ -44,7 +44,7 @@ class Download(feapder.AirSpider):
         newest_task = self._mysqldb.find(search, to_json=True)
         if newest_task:
             file = newest_task[0]["file"]
-            task_id = int(os.path.basename(file).split(".")[0])
+            task_id = int(os.path.basename(file).split(".")[0]) + 1
         else:
             task_id = 1
         for task in tasks:
