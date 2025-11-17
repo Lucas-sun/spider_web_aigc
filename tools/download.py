@@ -32,6 +32,7 @@ class Download(feapder.AirSpider):
             select * from spider_web_img_url
             where website='{WEBSITE}'
                 and status in (0, 2)
+                and url is not null
             order by created_at asc
         """
         tasks = self._mysqldb.find(sql, to_json=True)
