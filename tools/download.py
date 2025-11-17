@@ -61,7 +61,7 @@ class Download(feapder.AirSpider):
         task = request.task
         task_id = request.priority
         # log.error(f"伪代码 更新任务状态为下载中")
-        self._mysqldb.update_smart(self.task_table, {"status": 2}, f"uuid={task['uuid']}")
+        self._mysqldb.update_smart(self.task_table, {"status": 2}, f"uuid='{task['uuid']}'")
 
         if not response.ok:
             raise Exception(f"请求失败 {response.url} {response.status_code}")
@@ -78,12 +78,12 @@ class Download(feapder.AirSpider):
             f.write(response.content)
 
         # log.error(f"伪代码 更新任务状态为成功 更新地址为 image_path")
-        self._mysqldb.update_smart(self.task_table, {"status": 1, "file": f"{domain}:{image_path}"},f"uuid={task['uuid']}")
+        self._mysqldb.update_smart(self.task_table, {"status": 1, "file": f"{domain}:{image_path}"},f"uuid='{task['uuid']}'")
 
     def failed_request(self, request: Request, response: Response, e: Exception):
         task = request.task
         # log.error("伪代码 更新任务状态为失败")
-        self._mysqldb.update_smart(self.task_table, {"status": -1}, f"uuid={task['uuid']}")
+        self._mysqldb.update_smart(self.task_table, {"status": -1}, f"uuid='{task['uuid']}'")
 
     def download_path_hack(self, path: str, **kwargs) -> str:
         new_path = path

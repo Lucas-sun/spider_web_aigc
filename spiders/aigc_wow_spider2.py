@@ -30,6 +30,12 @@ urls = [
     "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A933%2C%22name%22%3A%22%E9%9E%8B%E5%B1%A5%22%7D%5D&page={pageNum}",
     "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A433782%2C%22name%22%3A%22%E6%9C%8D%E8%A3%85%22%7D%5D&page={pageNum}",
     "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A933%2C%22name%22%3A%22%E9%9E%8B%E5%B1%A5%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72105&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72105&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}",
+    "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}",
 ]
 urls_mapping = {
     "https://www.wow-trend.com/searchpage/?gender_id=72105&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A433782%2C%22name%22%3A%22%E6%9C%8D%E8%A3%85%22%7D%5D&page={pageNum}": "women clothes",
@@ -38,6 +44,12 @@ urls_mapping = {
     "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A933%2C%22name%22%3A%22%E9%9E%8B%E5%B1%A5%22%7D%5D&page={pageNum}": "men shoes",
     "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A433782%2C%22name%22%3A%22%E6%9C%8D%E8%A3%85%22%7D%5D&page={pageNum}": "kids clothes",
     "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A933%2C%22name%22%3A%22%E9%9E%8B%E5%B1%A5%22%7D%5D&page={pageNum}": "kids shoes",
+    "https://www.wow-trend.com/searchpage/?gender_id=72105&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}": "women accessories",
+    "https://www.wow-trend.com/searchpage/?gender_id=72105&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}": "women bags",
+    "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}": "men accessories",
+    "https://www.wow-trend.com/searchpage/?gender_id=72103&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}": "men bags",
+    "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A937%2C%22name%22%3A%22%E9%85%8D%E9%A5%B0%22%7D%5D&page={pageNum}": "kids accessories",
+    "https://www.wow-trend.com/searchpage/?gender_id=72107&keywords=&type=picture&filter=%5B%7B%22group_id%22%3A116%2C%22id%22%3A935%2C%22name%22%3A%22%E5%8C%85%E8%A2%8B%22%7D%5D&page={pageNum}": "kids bags",
 }
 
 user_table = "spider:aigc:image:wow"
@@ -50,7 +62,11 @@ class AigcWowSpider(feapder.AirSpider):
         self.url_index = int(url_index)
 
     def start_requests(self):
-        start_page = 20052
+        # 0 10384
+        # 2 9353
+        # 3 1
+        # 4 2078
+        start_page = 1
         yield feapder.Request(
             url=urls[self.url_index].format(pageNum=start_page),
             pageNum=start_page,
