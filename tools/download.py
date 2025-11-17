@@ -77,6 +77,7 @@ class Download(feapder.AirSpider):
         image_path = os.path.join(path, f"{str(task_id)}.jpg")
         with open(image_path, "wb") as f:
             f.write(response.content)
+            log.info(f"{image_path} 下载成功")
 
         # log.error(f"伪代码 更新任务状态为成功 更新地址为 image_path")
         self._mysqldb.update_smart(self.task_table, {"status": 1, "file": f"{domain}:{image_path}"},f"uuid='{task['uuid']}'")
